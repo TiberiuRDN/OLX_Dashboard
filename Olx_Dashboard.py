@@ -4,13 +4,13 @@ import plotly.express as px
 
 
 
-dfff = pd.read_excel("/Users/tiberiuradan/Desktop/olxgroupbusinesssalesanalystcasestudy/BI Assignment Data.xlsb", engine='pyxlsb')
-dff = pd.read_excel("/Users/tiberiuradan/Desktop/olxgroupbusinesssalesanalystcasestudy/BI_Short.xlsb", engine='pyxlsb', index_col=False)
-df = pd.read_excel("/Users/tiberiuradan/Desktop/olxgroupbusinesssalesanalystcasestudy/BI_Short.xlsb", engine='pyxlsb')
+dfff = pd.read_excel("BI Assignment Data.xlsb", engine='pyxlsb')
+dff = pd.read_excel("BI_Short.xlsb", engine='pyxlsb', index_col=False)
+df = pd.read_excel("BI_Short.xlsb", engine='pyxlsb')
 
 
 #Totals Data Frame
-dfff= pd.read_excel("/Users/tiberiuradan/PycharmProjects/DataAnalysis/Totals_Pivot.xls", index_col=False)
+dfff= pd.read_excel("Totals_Pivot.xls", index_col=False)
 dfff_table= pd.DataFrame(dfff).head(7)
 
 
