@@ -35,7 +35,7 @@ df["Segments"] = df["Total Revenue"].apply(assign_segment)
 df = df.sort_values('Total Revenue', ascending=False)
 df.to_csv('BI Short Segments.csv', index=False)
 
-df= pd.read_csv("/Users/tiberiuradan/PycharmProjects/DataAnalysis/BI Short Segments.csv")
+df= pd.read_csv("BI Short Segments.csv")
 df = df.sort_values('Total Revenue', ascending=True)
 
 x=(df['User ID'])
@@ -99,7 +99,7 @@ fig_user_line.update_yaxes(type='category')
 
 
 #Linechart: Total Revenue by Month
-df = pd.read_excel("/Users/tiberiuradan/PycharmProjects/DataAnalysis/Total Revenue by Month.xlsx", index_col=False)
+df = pd.read_excel("Total Revenue by Month.xlsx", index_col=False)
 x= df['Month']
 y= df['Total Revenue'].astype(float)
 fig_line = px.line(df, x='Month', y='Total Revenue', markers= True)
