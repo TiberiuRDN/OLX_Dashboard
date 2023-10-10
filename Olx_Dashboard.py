@@ -99,7 +99,7 @@ with st.expander("Monthly Revenue", expanded=True):
     col1.plotly_chart(fig_line)
     #Dataframe
     col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
-    col2.dataframe(months, hide_index=True, width=245, height=245)
+    col2.dataframe(months, hide_index=True, width=350, height=350)
 
 
 
