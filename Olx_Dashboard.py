@@ -70,7 +70,7 @@ with st.sidebar:
     Welcome to the OLX Dashboard! 
     
     This tool offers valuable insights into OLX user data and revenue statistics.
-    It provides a moderate level of interaction, therefore you can set the order of your data frame, hover over a certain datapoint and get the core information, or calculate the revenue by using the slider. 
+    It provides a moderate level of interaction, therefore you can set the order of your data frame, hover over a certain datapoint and get the core information.
     
     Monthly Revenue:
     View monthly revenue trends from July to December.
@@ -82,7 +82,7 @@ with st.sidebar:
     The bar chart displays the top users by promo revenue.
     
     Type of Users:
-    Metrics for different user types:
+    Metrics for different user segments:
     Positive Revenue Users,
     Negative Revenue Users,
     No Revenue Users.
