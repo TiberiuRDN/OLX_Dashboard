@@ -4,7 +4,7 @@ import plotly.express as px
 
 dff = pd.read_excel("BI_Short.xlsb", engine='pyxlsb', index_col=False)
 df = pd.read_excel("BI_Short.xlsb", engine='pyxlsb')
-
+months = pd.read_excel("Total Revenue by Month.xlsx")
 
 #Totals Data Frame
 dfff= pd.read_excel("Totals_Pivot.xls", index_col=False)
@@ -97,9 +97,9 @@ with st.expander("Monthly Revenue", expanded=True):
     st.write("<h1 style='font-size: 17px;'>Total Revenue by Month</h1>", unsafe_allow_html=True)
     col1, col2 = st.columns([2,1], gap="medium")
     col1.plotly_chart(fig_line)
-   
-    # col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
-    # col2.dataframe(filtered_df, hide_index=True, width=245, height=245)
+    #Dataframe
+    col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
+    col2.dataframe(months, hide_index=True, width=245, height=245)
 
 
 
