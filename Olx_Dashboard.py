@@ -13,7 +13,6 @@ dfff_table= pd.DataFrame(dfff).head(7)
 
 
 #Scatter Plot
-
 df= pd.read_csv("BI Short Segments.csv")
 df = df.sort_values('Total Revenue', ascending=True)
 
