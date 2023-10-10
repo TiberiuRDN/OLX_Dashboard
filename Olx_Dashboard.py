@@ -98,14 +98,14 @@ with st.expander("Monthly Revenue", expanded=True):
     col1, col2 = st.columns([2,1], gap="medium")
     col1.plotly_chart(fig_line)
     #Slider
-    months_range = ['July', 'August', 'September', 'October', 'November', 'December']
-    filtered_df = df[df['Month'].isin(months_range)]
-    selected_month = col2.select_slider("Select a month:", options=filtered_df['Month'].tolist())
-    selected_month_index = filtered_df[filtered_df['Month'] == selected_month].index[0]
-    sum_revenue = filtered_df['Total Revenue'].iloc[:selected_month_index+1].sum()
-    start_month = "July"
-    end_month = selected_month
-    date_range = f"{start_month} - {end_month}"
+    # months_range = ['July', 'August', 'September', 'October', 'November', 'December']
+    # filtered_df = df[df['Month'].isin(months_range)]
+    # selected_month = col2.select_slider("Select a month:", options=filtered_df['Month'].tolist())
+    # selected_month_index = filtered_df[filtered_df['Month'] == selected_month].index[0]
+    # sum_revenue = filtered_df['Total Revenue'].iloc[:selected_month_index+1].sum()
+    # start_month = "July"
+    # end_month = selected_month
+    # date_range = f"{start_month} - {end_month}"
     #Metrc
     col2.metric(label="Total Revenue", value=date_range, delta=f"${sum_revenue:,}")
     col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
