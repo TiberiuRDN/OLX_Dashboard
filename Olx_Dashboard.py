@@ -77,7 +77,7 @@ with st.sidebar:
     Select a month to see cumulative revenue, or preview the fluctuation in a line chart.
     
     User Data:
-    Explore user segments and total revenue.
+    Explore User Segments and Total Revenue.
     The scatterplot shows User ID vs. Total Revenue, highlighting top and bottom users.
     The bar chart displays the top users by promo revenue.
     
@@ -88,8 +88,7 @@ with st.sidebar:
     No Revenue Users.
     
     Ads, Listings, and Renewals by Month:
-    Get totals for ads, listings, and renewals by month.
-    Metrics identify the high and low months in each category.
+    Get totals for ads, listings, and renewals by month, and "metrics" to identify the high and low months in each category.
     """)
 
 
