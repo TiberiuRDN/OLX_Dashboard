@@ -13,24 +13,6 @@ dfff_table= pd.DataFrame(dfff).head(7)
 
 
 #Scatter Plot
-#Taking 0's out
-zero_revenue_df = df[df["Total Revenue"] == 0]
-zero_revenue_df.to_csv('Zero_Revenue_Users.csv', index=False)
-df = df[df["Total Revenue"] != 0]
-
-#Segmentation
-quartiles = df["Total Revenue"].quantile([0.25, 0.50, 0.75])
-segment_names = ["Low Revenue", "Middle Revenue", "Top Revenue"]
-def assign_segment(total_revenue):
-    if total_revenue <= quartiles[0.25]:
-        return segment_names[0]
-    elif total_revenue <= quartiles[0.50]:
-        return segment_names[1]
-    else:
-        return segment_names[2]
-df["Segments"] = df["Total Revenue"].apply(assign_segment)
-df = df.sort_values('Total Revenue', ascending=False)
-df.to_csv('BI Short Segments.csv', index=False)
 
 df= pd.read_csv("BI Short Segments.csv")
 df = df.sort_values('Total Revenue', ascending=True)
