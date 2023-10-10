@@ -106,8 +106,8 @@ with st.expander("Monthly Revenue", expanded=True):
     # start_month = "July"
     # end_month = selected_month
     # date_range = f"{start_month} - {end_month}"
-    #Metrc
-    col2.metric(label="Total Revenue", value=date_range, delta=f"${sum_revenue:,}")
+    # col2.metric(label="Total Revenue", value=date_range, delta=f"${sum_revenue:,}")
+    #Metric
     col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
     col2.dataframe(filtered_df, hide_index=True, width=245, height=245)
 
