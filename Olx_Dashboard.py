@@ -98,8 +98,8 @@ with st.expander("Monthly Revenue", expanded=True):
     col1, col2 = st.columns([2,1], gap="medium")
     col1.plotly_chart(fig_line)
     #Dataframe
-    col2.write("<div style='margin-left: 100px;'></div>", unsafe_allow_html=True)
-    col2.write("<div style='margin-bottom: 100px;'></div>", unsafe_allow_html=True)
+    col2.write("<div style='margin-left: 50px;'></div>", unsafe_allow_html=True)
+    col2.write("<div style='margin-bottom: 50px;'></div>", unsafe_allow_html=True)
     col2.dataframe(months, hide_index=True, width=400, height=280)
 
 
