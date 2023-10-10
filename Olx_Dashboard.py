@@ -2,9 +2,6 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-
-
-dfff = pd.read_excel("BI Assignment Data.xlsb", engine='pyxlsb')
 dff = pd.read_excel("BI_Short.xlsb", engine='pyxlsb', index_col=False)
 df = pd.read_excel("BI_Short.xlsb", engine='pyxlsb')
 
