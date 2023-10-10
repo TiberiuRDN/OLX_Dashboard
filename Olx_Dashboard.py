@@ -57,7 +57,8 @@ fig_user_line.show()
 
 
 #Linechart: Total Revenue by Month
-df = pd.read_excel("Total Revenue by Month.xlsx", index_col=False).head(7)
+df = pd.read_excel("Total Revenue by Month.xlsx", index_col=False)
+df= df.DataFrame(df).head(7)
 fig_line = px.line(df, x='Month', y='Total Revenue', markers= True)
 fig_line.update_xaxes(title_text='Month', tickangle=0)
 
