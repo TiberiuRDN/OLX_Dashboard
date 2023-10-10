@@ -71,31 +71,11 @@ fig_scatter.update_traces(hovertemplate='User ID: %{x}<br>Total Revenue: %{y:$,.
 fig_scatter.update_layout(xaxis=dict(tickformat='d'), yaxis=dict(tickformat='d'))
 
 
-
-
-#Creating a piechart
-dff= pd.DataFrame(dff)
-No_Revenue_Users = len(dff[dff['Total Revenue'] == 0])
-Positive_Revenue_Users = len(dff[dff['Total Revenue'] > 0])
-Negative_Revenue_Users = len(dff[dff['Total Revenue'] < 0])
-
-data= {"Type Of User": ['No Revenue User', 'Positive Revenue User', 'Negative Revenue User'],
-       "Value": [No_Revenue_Users, Positive_Revenue_Users, Negative_Revenue_Users]}
-data=pd.DataFrame(data)
-fig_pie = px.pie(data, values='Value',
-                 names='Type Of User',
-                 color_discrete_sequence=px.colors.sequential.RdBu)
-fig_pie.update_layout(uniformtext_minsize=16, uniformtext_mode='hide')
-
-
-
-
 #Horizontal Barchart: Users by Promo Revenue
-dff= dff.sort_values('Promo Revenues', ascending=False)
-dff= pd.DataFrame(dff).head(11)
-dff= dff[['User ID', 'Promo Revenues']]
+dff=pd.read_csv("Horizontal Promo Revenue.csv", index_col=False)
 fig_user_line= px.bar(dff, x="Promo Revenues", y="User ID", orientation='h', color_discrete_sequence=px.colors.sequential.Blugrn_r)
 fig_user_line.update_yaxes(type='category')
+fig_user_line.show()
 
 
 #Linechart: Total Revenue by Month
