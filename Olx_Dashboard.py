@@ -35,8 +35,6 @@ df.loc[top_10_lowest.index, 'Marker Size'] = 20
 
 #Setting a color scale
 color_scale = px.colors.sequential.Jet
-
-#The color scale is being added by 'color', using the numerical values obtained eariler
 fig_scatter= px.scatter(df, x='User ID', y='Total Revenue',
                         color='Segments_Label',
                         color_continuous_scale=px.colors.sequential.Blugrn_r,
@@ -96,6 +94,7 @@ with st.expander("Monthly Revenue", expanded=True):
     st.write("<h1 style='font-size: 17px;'>Total Revenue by Month</h1>", unsafe_allow_html=True)
     col1, col2 = st.columns([2,1], gap="medium")
     col1.plotly_chart(fig_line)
+  
     #Dataframe
     col2.write("<div style='margin-left: 20px;'></div>", unsafe_allow_html=True)
     col2.write("<div style='margin-bottom: 50px;'></div>", unsafe_allow_html=True)
@@ -105,14 +104,18 @@ with st.expander("Monthly Revenue", expanded=True):
 
 with st.expander("User Data", expanded=True):
     col3, col4, col0= st.columns([3,2,1], gap="medium")
+  
     #Scatterplot
     col3.write("<h1 style='font-size: 17px;'>Users by Total Revenue</h1>", unsafe_allow_html=True)
     col3.plotly_chart(fig_scatter, use_container_width=True)
+  
     #Line Chart
     col4.write("<h1 style='font-size: 17px;'>Top Users by Promo Revenue</h1>", unsafe_allow_html=True)
     col4.plotly_chart(fig_user_line, use_container_width=True)
+  
     #Metrics
     col0.write("<h1 style='font-size: 17px;'>Type of Users</h1>", unsafe_allow_html=True)
+  
     #Taking the arrow down
     col0.write( """<style>[data-testid="stMetricDelta"] svg {display: none;}</style>""",unsafe_allow_html=True,)
     col0.metric(label="Positive Revenue Users", value="18.6%", delta="27,899 users")
