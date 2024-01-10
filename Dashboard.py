@@ -61,7 +61,7 @@ fig_line.update_xaxes(title_text='Month', tickangle=0)
 
 #Streamlit integration
 st.set_page_config(layout="wide")
-st.title("OLX Dashboard")
+st.title("OL Dashboard")
 with st.sidebar:
     st.title("User Guide")
     st.write("""
