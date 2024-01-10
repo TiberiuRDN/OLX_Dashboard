@@ -61,13 +61,13 @@ fig_line.update_xaxes(title_text='Month', tickangle=0)
 
 #Streamlit integration
 st.set_page_config(layout="wide")
-st.title("OL Dashboard")
+st.title("Sales Dashboard")
 with st.sidebar:
     st.title("User Guide")
     st.write("""
-    Welcome to the OLX Dashboard! 
+    Welcome to the Sales Dashboard! 
     
-    This tool offers valuable insights into OLX user data and revenue statistics.
+    This tool offers valuable insights into user data and revenue statistics.
     It provides a moderate level of interaction, therefore you can set the order of your data frame, hover over a certain datapoint and get the core information.
     
     Monthly Revenue:
